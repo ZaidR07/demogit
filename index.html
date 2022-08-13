@@ -1,1 +1,84 @@
-Rahman zaid....
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple</title>
+    <style>
+        .box1{
+            margin-left: -10px;
+           
+        }
+        .item{
+            margin:auto;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            box-sizing: border-box;
+            height: 90vh;
+            width: 100%;
+            border: 2px solid brown;
+            background-color: brown;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <h2>~CONVERTER~</h2>
+            <input type="text" placeholder="Enter Value:" id="1" style="text-align: center;">
+            <br><br>
+            <input id = "2" placeholder="Result" style="text-align:center ;"><br><br>
+            <div class="box1">
+                <button onclick="money()">$</button>
+                <button onclick="temperature()">Temp</button>
+                <button onclick="meter()">Distance</button>
+                <button onclick="kilo()">Weight</button><br>
+                
+            </div>
+            <script>
+                function money()
+                {
+                    var a = parseInt(document.getElementById('1').value);
+                    var b = a/80;
+                    document.getElementById('2').value=b;
+
+                    
+                }
+                function kilo()
+                {
+                    var a = parseInt(document.getElementById('1').value);
+                    var b = a*1000;
+                    document.getElementById('2').value=b;
+
+                }
+                function temperature()
+                {
+                    var a = parseInt(document.getElementById('1').value);
+                    var b = (a-32)/1.8;
+                    document.getElementById('2').value=b;
+
+                    
+                }
+                function meter()
+                {
+                    var a = parseInt(document.getElementById('1').value);
+                    var b = a*1000;
+                    document.getElementById('2').value=b;
+
+                    
+                }
+            </script>
+
+
+
+
+
+        </div>
+    </div>
+    
+</body>
+</html>
